@@ -4,6 +4,12 @@ git init
 how to add all the files in the local repository
 git add . 
 
+how to add individual files in the local repository
+git add <fileName>
+
+how to remove files but add them later
+git rm --cached -r .
+
 to switch to a new branch
 git checkout <branchName>
 
