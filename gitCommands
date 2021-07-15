@@ -1,0 +1,73 @@
+how to initialize a local repository
+git init
+
+how to add all the files in the local repository
+git add . 
+
+to switch to a new branch
+git checkout <branchName>
+
+to delete branch if it has been merged with master
+git branch -d <branchName>
+
+to delete branch if it has not been merged with master
+git branch -D <branchName>
+
+to create a new branch and automatically checkout 
+git checkout -b <branchName>
+
+to merge a branch
+git merge <branchName>
+
+merge conflict: git add .
+		git commit (press shift colon and wq)
+
+to push code
+git push <git repo to push the code> <branchName>
+e.g git push https://github.com/olayeni45/Git-Story.git master
+
+to create an alias for the url
+git remote add origin https://github.com/olayeni45/Git-Story.git
+
+new push statement
+git push -u origin master
+
+to clone a local repository 
+git clone <repo url>
+
+If you clone or fork a repo, you do not have to set the origin variable to the 
+url from github
+
+to check for the url
+git remote -v
+
+Pull request
+pull request gets all the code and merges it from the master branch to your local computer
+syntax: git pull origin master
+
+to push a branch to github
+git push origin <branchName>
+
+to remove .env before pushing
+git rm -r --cached .env
+
+to remove node_modules before pushing
+git rm -r --cached node_modules
+
+to remove gitignore
+git rm -r --cached .gitignore
+
+how to change the url of heroku
+heroku git:remote -a <your app name>
+
+how to check the commits made by people
+git log
+
+how to check the status of the working tree
+git status
+
+how to check the changes to the file made in the working directory
+git diff
+
+how to revert changes made to a file
+git restore <fileName>
