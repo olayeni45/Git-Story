@@ -1,1 +1,1 @@
-Chapter 3 from fullstack development created by Anifowose Olayeni while learning git
+While being mentored by the greatest Software Developer, Dr. Angela Yu.
