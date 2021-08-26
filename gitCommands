@@ -75,6 +75,9 @@ heroku git:remote -a <your app name>
 how to check the commits made by people
 git log
 
+how to squash the commit message to a line
+git log --oneline
+
 how to check the status of the working tree
 git status
 
@@ -96,3 +99,32 @@ in the "Files changed" tab.
 Creating a pull request
 Create a pull request to propose and collaborate on changes to a repository. These changes are proposed in a branch,
 which ensures that the default branch only contains finished and approved work.
+
+Configuring your username and email on git bash
+git config --global user.name "Olayeni"
+git config --global user.email "Olayeni45@gmail.com"
+
+To see the state of the code at an earlier stage
+git checkout <commitId>
+
+To revert a commit
+git revert <commitId>
+
+To reset the changes of a commit
+git reset <commitId> --hard
+
+To list all branches
+git branch -a
+
+To list all configurations
+git config --list
+
+To change the default editor of git
+git config --global core.editor "notepad"
+
+To check for help for a particular git command
+git <command> --help
+There are two options to this
+a. git pull --help : This opens a webpage to assist you with git pull
+b. git pull -h
+
