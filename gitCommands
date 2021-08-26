@@ -63,7 +63,7 @@ git push origin <branchName>
 to remove .env before pushing
 git rm -r --cached .env
 
-to remove node_modules before pushing
+to remove node_modules before pushing after it has been staged
 git rm -r --cached node_modules
 
 to remove gitignore
@@ -128,3 +128,27 @@ There are two options to this
 a. git pull --help : This opens a webpage to assist you with git pull
 b. git pull -h
 
+To add and commit with one command
+git commit -a -m "Commit message"
+
+To ammend your last commit message
+git commit --amend
+
+How to track new changes without providing a new commit message
+git commit --amend --no-edit
+
+To remove a file from staging area
+git restore --staged <fileName>
+
+SSH Connections - Secure Socket Shell
+How to add a SSH key
+i. Navigate to your local project repository
+ii. Right click and select "Git GUI here"
+iii. On the interface, navigate to help and click on generate or show key if you already have a SSH key
+iv. Enter a passphrase
+v. Confirm your passphrase
+vi. A unique SSH key would be generated. Navigate to your github account, go to SSH and GPG keys, 
+add new SSH key and paste your SSH key There
+
+To set your remote url to use SSH url
+git remote set-url origin <ssh url>
