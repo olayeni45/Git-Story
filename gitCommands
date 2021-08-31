@@ -162,6 +162,8 @@ Rebase Vs Squash commits
 
 Git fetch
 This fetches changes from the remote repository and adds it to your local repository without merging
+git fetch --all to fetch all the changes 
+
 To fetch and merge: Git fetch + Git merge
 
 Git pull = fetch + merge
@@ -179,3 +181,51 @@ FOUR RULES OF HAPPY WORK WITH GIT
 
 Interactive rebase
 git rebase -i
+
+Git reset
+This is used to undo changes
+
+Git reset --soft vs Git reset --mixed vs Git reset --hard
+
+Git reset --soft moves you back to your staging area (git commit) all the changes are still added to the staging area
+you just have to git commit the changes
+
+Git reset --mixed moves you back to the working tree (git add .) the files are present in the working tree but are
+not added to the staging area. you would have to do git add then git commit. This is the default git reset
+
+git reset --hard deletes all the changes you've made so far
+
+How to stash changes
+git add .
+git stash
+
+This saves what you were working on in another place for future use
+Stash works according to LIFO principle - Last in First Out
+
+To add the stash changes to your current branch
+git stash apply
+
+TO list all the stash you have
+Git stash list
+Result of git stash list: stash@{0}: WIP on master: 8edc88e Testing stash
+						  stash@{1}: WIP on master: 8aa268c Git reset
+Since stash works on a Stack structure, you could apply the latest stash change through git stash apply stash@{1}
+
+How to add a custom stash message
+git stash save <stashMessage>
+eg: git stash save "Modified index.html"
+
+To remove a stash from the list of stashes
+git stash pop
+
+To add all the files to the staging area and stash
+git stash -u
+
+How to create a new branch from stash
+git stash branch <newBranchName>
+
+to drop a particular stash
+git stash drop stash@{0}
+
+to delete all stashes
+git stash clear
