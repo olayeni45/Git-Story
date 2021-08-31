@@ -229,3 +229,29 @@ git stash drop stash@{0}
 
 to delete all stashes
 git stash clear
+
+
+Git reflog
+Reflog is a mechanism to record when the tip of branches are updated. This command is to manage the
+information recorded in it. Basically every action you perform inside of Git where data is stored, you
+can find it inside of the reflog.
+git reflog
+
+To show reflog for a specific period of time
+git reflog --since="1.hour.ago"
+
+git log -g
+
+Cherry-picking
+git cherry-pick is a powerful command that enables arbitrary Git commits to be picked by reference and appended 
+to the current working HEAD. Cherry picking is the act of picking a commit from a branch and applying it to another. 
+Git cherry-pick can be useful for undoing changes.
+
+git cherry-pick <commit checkSum>
+e.g git cherry-pick f6b55b4
+
+
+Best practices of using cherry-pick
+1. Prefer merge or rebase when possible
+2. Avoid creating any duplication
+3. Use 'x' option during cherry-pick e.g git cherry-pick -x to apply the commit message to the cherry-pick
