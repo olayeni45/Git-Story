@@ -152,3 +152,30 @@ add new SSH key and paste your SSH key There
 
 To set your remote url to use SSH url
 git remote set-url origin <ssh url>
+
+
+PULL REQUESTS
+Rebase Vs Squash commits
+ Rebasing is the process of moving or combining a sequence of commits to a new base commit.
+ Rebasing is most useful and easily visualized in the context of a feature branching workflow.
+
+
+Git fetch
+This fetches changes from the remote repository and adds it to your local repository without merging
+To fetch and merge: Git fetch + Git merge
+
+Git pull = fetch + merge
+
+Git rebase vs Git pull --rebase
+Git rebase just rebases the branch
+Git pull --rebase = git fetch + git rebase
+
+
+FOUR RULES OF HAPPY WORK WITH GIT
+1. Always create branches from the master
+2. Force update and change commit history only on your branches
+3. Use --force-with-lease instead of -f for git push e.g git push --force-with-lease instead of git push -fetch
+4. Always rebase on the origin master branch before creating a pull request
+
+Interactive rebase
+git rebase -i
